@@ -1,0 +1,17 @@
+﻿@{
+    ViewBag.Title = "Удаление контроллера";
+}
+
+<div>
+    <h3>Удаление</h3>
+    <form method="post">
+        <input type="hidden" value="@ViewBag.PLCId" name=" PLCId" />
+        <input type="hidden" value="@ViewBag.Name" name=" Name" />
+        <input type="hidden" value="@ViewBag.Discription" name=" Discription" />
+        <input type="hidden" value="@ViewBag.NumOfIO" name=" NumOfIO" />
+        <input type="hidden" value="@ViewBag.Country" name=" Country" />
+        <input type="hidden" value="@ViewBag.Sphere" name=" Sphere" />
+        <p>Вы уверенны, что хотите удалить контроллер?</p>
+        <input type="submit" value="Удалить" />
+    </form>
+</div>

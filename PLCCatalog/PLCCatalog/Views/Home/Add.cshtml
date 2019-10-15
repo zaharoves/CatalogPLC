@@ -1,0 +1,50 @@
+﻿
+@{
+    ViewBag.Title = "Добавление контроллера";
+}
+
+    <div>
+        <style type="text/css">
+            TABLE {
+                background: #e6e6e6;
+                border: 5px #000000;
+            }
+
+            TD, TH {
+                padding: 5px; 
+                border: 1px solid #000000;
+            }
+        </style>
+        <h3>Добавить контроллер</h3>
+        <form method="post">
+            <input type="hidden" value="@ViewBag.PLCId" name=" PLCId" />
+            <table>
+                <tr>
+                    <td><p><b>Название</b></p></td>
+                    <td><input type="text" name="Name" /></td>
+                </tr>
+                <tr>
+                    <td><p><b>Описание</b></p></td>
+                    <td><input type="text" name="Discription" /></td>
+                </tr>
+                <tr>
+                    <td><p><b>Кол-во входов/выходов</b></p></td>
+                    <td><input type="text" name="NumOfIO" /></td>
+                </tr>
+                <tr>
+                    <td><p><b>Страна</b></p></td>
+                    <td><input type="text" name="Country" /></td>
+                </tr>
+                <tr>
+                    <td><p><b>Область применения</b></p></td>
+                    <td>
+                        <input type="checkbox" value="smart house" name="Sphere1">smart house<Br>
+                        <input type="checkbox" value="industrial automation" name="Sphere2">industrial automation<Br>
+                        <input type="checkbox" value="ventilation systems" name="Sphere3">ventilation systems<Br>
+                        <input type="checkbox" value="fire safety systems" name="Sphere4">fire safety systems<Br>
+                    </td>
+                </tr>
+            </table>
+            <input type="submit" value="Добавить" />
+        </form>
+    </div>

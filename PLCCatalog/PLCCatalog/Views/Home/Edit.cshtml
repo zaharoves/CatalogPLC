@@ -1,0 +1,101 @@
+﻿@{
+    ViewBag.Title = "Редактирование контроллера";
+}
+@model PLCCatalog.Models.PLC
+
+@using (Html.BeginForm("Edit", "Home", FormMethod.Post))
+{
+    <div>
+        <style type="text/css">
+            TABLE {
+                background: #e6e6e6;
+                border: 5px #000000;
+            }
+
+            TD, TH {
+                padding: 5px;
+                border: 1px solid #000000;
+            }
+        </style>
+        <h3>Редактирование</h3>
+        <form method="post">
+            <input type="hidden" value="@ViewBag.PLCId" name=" PLCId" />
+            <table>
+                <tr>
+                    <td><p><b>@Html.LabelFor(m => m.Name, "Название")</b></p></td>
+                    <td>@Html.EditorFor(m => m.Name)</td>
+                </tr>
+                <tr>
+                    <td><p><b>@Html.LabelFor(m => m.Discription, "Описание")</b></p></td>
+                    <td>@Html.EditorFor(m => m.Discription)</td>
+                </tr>
+                <tr>
+                    <td><p><b>@Html.LabelFor(m => m.NumOfIO, "Количество входов, выходов")</b></p></td>
+                    <td>@Html.EditorFor(m => m.NumOfIO)</td>
+                </tr>
+                <tr>
+                    <td><p><b>@Html.LabelFor(m => m.Country, "Страна производитель")</b></p></td>
+                    <td>@Html.EditorFor(m => m.Country)</td>
+                </tr>
+                <tr>
+                    <td><p><b>@Html.LabelFor(m => m.Sphere, "Cферы применения")</b></p></td>
+                    <td>
+                        <input type="checkbox" value="smart house" name="Sphere1">smart house<Br>
+                        <input type="checkbox" value="industrial automation" name="Sphere2">industrial automation<Br>
+                        <input type="checkbox" value="ventilation systems" name="Sphere3">ventilation systems<Br>
+                        <input type="checkbox" value="fire safety systems" name="Sphere4">fire safety systems<Br>
+                    </td>
+                </tr>
+            </table>
+            <input type="submit" value="Внести изменения" />
+        </form>
+    </div>
+}
+
+
+
+
+
+
+
+
+
+@*@{
+        ViewBag.Title = "Редактировать книгу";
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }
+    @model PLCCatalog.Models.PLC
+
+    @using (Html.BeginForm("Edit", "Home", FormMethod.Post))
+    {
+    <fieldset>
+        @Html.HiddenFor(m => m.Id)
+        <p>
+            @Html.LabelFor(m => m.Name, "Название")
+            <br />
+            @Html.EditorFor(m => m.Name)
+        </p>
+        <p>
+            @Html.LabelFor(m => m.Discription, "Описание")
+            <br />
+            @Html.EditorFor(m => m.Discription)
+
+        </p>
+        <p>
+            @Html.LabelFor(m => m.NumOfIO, "Кол-во входов, выходов")
+            <br />
+            @Html.EditorFor(m => m.NumOfIO)
+        </p>
+        <p>
+            @Html.LabelFor(m => m.Country, "Страна")
+            <br />
+            @Html.EditorFor(m => m.Country)
+        </p>
+        <p>
+            @Html.LabelFor(m => m.Sphere, "Сфера применения")
+            <br />
+            @Html.EditorFor(m => m.Sphere)
+        </p>
+        <p><input type="submit" value="Отправить" /></p>
+    </fieldset>
+    }*@

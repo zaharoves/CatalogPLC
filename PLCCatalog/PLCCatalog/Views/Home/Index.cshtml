@@ -1,0 +1,41 @@
+﻿@{
+    ViewBag.Title = "Каталог контроллеров";
+}
+    <div>
+        <style type="text/css">
+            TABLE {
+                background: #e6e6e6;
+                border: 5px #000000; 
+            }
+
+            TD, TH {
+                padding: 5px; 
+                border: 1px solid #000000; 
+            }
+        </style>
+        <h3>Контроллеры</h3>
+        <table cellspacing="1">
+            <tr>
+                <td><p><b>Модель</b></p></td>
+                <td><p><b>Описание</b></p></td>
+                <td><p><b>Кол-во входов, выходов</b></p></td>
+                <td><p><b>Страна производиетель</b></p></td>
+                <td><p><b>Область применения</b></p></td>
+                <td></td>
+                <td></td>
+            </tr>
+            @foreach (var c in ViewBag.PLCs)
+            {
+                <tr>
+                    <td><p>@c.Name</p></td>
+                    <td><p>@c.Discription</p></td>
+                    <td><p>@c.NumOfIO</p></td>
+                    <td><p>@c.Country</p></td>
+                    <td><p>@c.Sphere</p></td>
+                    <td><p><a href="/Home/Edit/@c.Id">Редактировать</a></p></td>
+                    <td><p><a href="/Home/Delete/@c.Id">Удалить</a></p></td>
+                </tr>
+            }
+        </table>
+        <p><a href="/Home/Add/1">Добавить контроллер</a></p>
+    </div>
